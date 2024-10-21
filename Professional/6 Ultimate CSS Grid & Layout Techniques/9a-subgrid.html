@@ -1,0 +1,120 @@
+<div class="container">
+  <div class="one card">
+    <h2>Venus, Earth, Moon, and Mars</h2>
+    <img
+      src="https://assets.codepen.io/296057/fem-venus.jpg"
+      alt="Graphic showing the relative sizes of Venus, Earth, Moon, and Mars. Earth and Venus are nearly the same size. Mars is roughly 1/2 the size of Earth, while the Moon is 1/4 the size of Earth."
+    />
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit esse
+      fuga exercitationem veritatis error autem provident dolorem ipsum illum
+      praesentium deleniti quidem distinctio sed odio, necessitatibus et facere.
+      Iusto blanditiis nemo voluptatibus esse deleniti? Nisi, architecto hic
+      aperiam, asperiores qui fugit possimus perspiciatis numquam cum, et dolor.
+      Magni, dolore obcaecati.
+    </p>
+    <p><a href="" class="button">Read more</a></p>
+  </div>
+  <div class="two card">
+    <h2>Lorem Ipsum Dolor</h2>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae aliquid
+      suscipit dolores explicabo animi numquam voluptatem officiis ad porro et.
+    </p>
+    <p><a href="" class="button">Read more</a></p>
+  </div>
+  <div class="three card">
+    <h2>Lorem</h2>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae aliquid
+      suscipit dolores explicabo.
+    </p>
+    <p><a href="" class="button">Read more</a></p>
+  </div>
+  <div class="four card">
+    <h2>Lorem Ipsum Dolor</h2>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae aliquid
+      suscipit dolores explicabo animi numquam voluptatem officiis ad porro et.
+    </p>
+    <p><a href="" class="button">Read more</a></p>
+  </div>
+  <div class="five card">
+    <h2>Lorem</h2>
+    <p>Lorem ipsum dolor sit.</p>
+    <p><a href="" class="button">Read more</a></p>
+  </div>
+</div>
+
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-rows: .2fr 1fr .1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .container > * {
+    padding: 1rem;
+    margin: 0;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    gap: 1rem;
+  }
+  .one {
+    grid-column: 1/3;
+    grid-row: 1/7;
+  }
+  .card > * {
+    margin: 0;
+  }
+
+  /* extremely basic formatting */
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  body {
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+  .one {
+    border: 2px solid #26547c;
+    background-color: #26547c33;
+  }
+  .two,
+  .five {
+    border: 2px solid #ef476f;
+    background-color: #ef476f33;
+  }
+  .three,
+  .four {
+    border: 2px solid #ffd166;
+    background-color: #ffd16633;
+  }
+  .button {
+    background-color: black;
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+  }
+  .button:hover {
+    background-color: #333;
+  }
+  img {
+    max-width: 100%;
+  }
+</style>

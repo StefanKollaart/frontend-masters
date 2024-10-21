@@ -1,0 +1,267 @@
+<h1>Planets and Moons</h1>
+<div>
+  <div class="card-container">
+    <div class="feature card">
+      <h2>Our Solar System</h2>
+      <img
+        src="https://assets.codepen.io/296057/fem-new-system.jpg"
+        alt="Many of the planets in the solar system, plus a few moons."
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum,
+        ad! Asperiores sed quae laudantium eveniet quis doloremque, ad veritatis
+        ipsam?
+      </p>
+      <p>
+        <a
+          href="https://images.nasa.gov/details/PIA03153"
+          class="button"
+          target="_blank"
+          >Learn more at NASA</a
+        >
+      </p>
+    </div>
+    <div class="card">
+      <h2>Earth and Moon</h2>
+      <img
+        src="https://assets.codepen.io/296057/fem-earth2.jpg"
+        alt="The dark side of the moon in front of the Earth as viewed from a spacecraft."
+      />
+      <p>
+        <a
+          href="https://images.nasa.gov/details/from-a-million-miles-away-nasa-camera-shows-moon-crossing-face-of-earth_20129140980_o"
+          target="_blank"
+          class="button"
+          >Learn more at NASA</a
+        >
+      </p>
+    </div>
+    <div class="card">
+      <h2>Mars, Phobos, and Deimos</h2>
+      <img
+        src="https://assets.codepen.io/296057/fem-mars.jpg"
+        alt="Part of Mars with two tiny asteroid-looking moons."
+      />
+      <p>
+        <a
+          href="https://images.nasa.gov/details/PIA17305"
+          target="_blank"
+          class="button"
+          >Learn more at NASA</a
+        >
+      </p>
+    </div>
+    <div class="card">
+      <h2>Jupiter and Galilean Moons</h2>
+      <img
+        src="https://assets.codepen.io/296057/fem-jupiter.jpg"
+        alt="Jupiter and its four Galilean moons."
+      />
+      <p>
+        <a
+          href="h https://images.nasa.gov/details/PIA01481"
+          target="_blank"
+          class="button"
+          >Learn more at NASA</a
+        >
+      </p>
+    </div>
+    <div class="card">
+      <h2>Saturn and its moons</h2>
+      <img
+        src="https://assets.codepen.io/296057/fem-saturn.jpg"
+        alt="Saturn and several of its moons."
+      />
+      <p>
+        <a
+          href="https://images.nasa.gov/details/PIA01482"
+          target="_blank"
+          class="button"
+          >Learn more at NASA</a
+        >
+      </p>
+    </div>
+    <div class="card">
+      <h2>Neptune and Triton</h2>
+      <img
+        src="https://assets.codepen.io/296057/fem-neptune.jpg"
+        alt="Triton, a gigantic moon, sits squarely in front of Neptune."
+      />
+      <p>
+        <a
+          href="https://images.nasa.gov/details/PIA00340"
+          target="_blank"
+          class="button"
+          >Learn more at NASA</a
+        >
+      </p>
+    </div>
+    <div class="card">
+      <h2>Pluto and Charon</h2>
+      <img
+        src="https://assets.codepen.io/296057/fem-pluto.jpg"
+        alt="Although Pluto is not technically a planet anymore, this photo of it with its moon Charon is pretty cool."
+      />
+      <p>
+        <a
+          href="https://images.nasa.gov/details/PIA19966"
+          target="_blank"
+          class="button"
+          >Learn more at NASA</a
+        >
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .card {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 3rem 0;
+    border-bottom: 1px solid #ccc;
+    gap: 0;
+    align-items: center;
+  }
+
+  .card:last-child {
+    border: none;
+  }
+
+  .card h2 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  .card img {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+
+  .card p {
+    margin: 0;
+  }
+
+  .feature img {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+
+  .feature p:not(:has(a)) {
+    display: none;
+  }
+
+  .feature p:last-child {
+    grid-row: 3/4;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 500px) {
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .feature {
+        grid-column: 1/3;
+        border: 1px solid #ccc;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+
+    .feature p:not(:has(a)) {
+        display: block;
+    }
+
+    .card {
+        display: block;
+        border: 1px solid #ccc;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+
+    .card p {
+        margin: 1rem 0;
+    }
+
+    .card:last-child {
+        border: 1px solid #ccc;
+    }
+
+    .card img {
+        margin: 1rem 0;
+    }
+
+    @media (min-width: 700px) {
+        .card-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .feature {
+            grid-column: 1/4;
+        }
+    }
+
+    @media (min-width: 950px) {
+        .card-container {
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 1rem;
+            gap: 1rem;
+            align-items: stretch;
+        }
+
+        .feature {
+            grid-column: 1/3;
+            grid-row: 1/4;
+            display: block;
+        }
+
+        .card a {
+            font-size: 0.7rem;
+        }
+
+        h1 {
+            max-width: 1200px;
+            margin: 3rem auto 2rem auto;
+        }
+    }
+  }
+
+  /* extremely basic formatting */
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  body {
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  .button {
+    background-color: #2d697c;
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+  }
+  .button:hover {
+    background-color: #327c94;
+  }
+</style>
